@@ -1,0 +1,711 @@
+/* =====================
+   General Layout
+===================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+}
+
+main {
+    padding: 40px;
+}
+
+
+
+/* =====================
+   Header
+===================== */
+
+.site-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+
+    background: #111;
+    color: white;
+
+}
+
+
+.logo h2 {
+    margin: 0;
+}
+
+
+
+.main-nav ul {
+
+    list-style: none;
+
+    display: flex;
+
+    gap: 25px;
+
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.main-nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: .3s;
+
+}
+
+
+.main-nav a:hover {
+
+    color:#0073aa;
+
+}
+
+
+
+
+/* =====================
+   Footer
+===================== */
+
+
+footer {
+
+    background:#111;
+
+    color:white;
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+
+
+
+
+/* =====================
+   Hero Section
+===================== */
+
+
+.hero-section {
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:60px;
+
+    padding:100px 40px;
+
+    min-height:600px;
+
+    background:white;
+
+}
+
+
+
+.hero-content {
+
+    flex:1;
+
+    max-width:600px;
+
+}
+
+
+.hero-content h1 {
+
+    font-size:55px;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.hero-content p {
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    color:#666;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.hero-image {
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.hero-image img {
+
+    width:100%;
+
+    max-width:550px;
+
+    border-radius:25px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+    transition:.5s;
+
+}
+
+
+.hero-image img:hover {
+
+    transform:scale(1.03);
+
+}
+
+
+
+
+
+/* =====================
+   Section Titles
+===================== */
+
+
+.services-section h2,
+.projects-section h2 {
+
+    text-align:center;
+
+    font-size:35px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+
+/* =====================
+   Cards Grid
+===================== */
+
+
+.services-container,
+.projects-container {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+
+
+/* =====================
+   Cards
+===================== */
+
+
+.service-card,
+.project-card {
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    transition:.4s;
+
+}
+
+
+
+.service-card:hover,
+.project-card:hover {
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+
+
+
+
+/* =====================
+   Card Images
+===================== */
+
+
+.card-image,
+.service-card img,
+.project-card img {
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+    transition:.5s;
+
+}
+
+
+
+.service-card:hover img,
+.project-card:hover img {
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+/* =====================
+   Card Text
+===================== */
+
+
+.service-card h3,
+.project-card h3 {
+
+    margin:20px 0 15px;
+
+    transition:.3s;
+
+}
+
+
+.service-card:hover h3,
+.project-card:hover h3 {
+
+    color:#0073aa;
+
+}
+
+
+.service-card p,
+.project-card p {
+
+    line-height:1.6;
+
+}
+
+
+
+
+
+/* =====================
+   Buttons
+===================== */
+
+
+.btn-primary {
+
+    margin-top:20px;
+
+    align-self:flex-start;
+
+    padding:12px 28px;
+
+    background:#0073aa;
+
+    color:white;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    display:inline-block;
+
+    transition:.3s;
+
+}
+
+
+
+.btn-primary:hover {
+
+    background:#005f8c;
+
+    transform:translateY(-3px);
+
+    color:white;
+
+}
+
+
+
+
+
+/* =====================
+   Project Link
+===================== */
+
+
+.project-card a:not(.btn-primary) {
+
+    display:inline-flex;
+
+    gap:8px;
+
+    margin-top:20px;
+
+    color:#0073aa;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+
+
+.project-card a:not(.btn-primary)::after {
+
+    content:"→";
+
+    transition:.3s;
+
+}
+
+
+.project-card a:not(.btn-primary):hover::after {
+
+    transform:translateX(6px);
+
+}
+
+
+
+
+
+/* =====================
+   Single Service
+===================== */
+
+
+.single-service-container,
+.single-project-container {
+
+    max-width:900px;
+
+    margin:80px auto;
+
+    padding:0 20px;
+
+}
+
+
+
+.single-service-container h1,
+.single-project-container h1 {
+
+    font-size:50px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.single-service-image,
+.single-project-image {
+
+    width:100%;
+
+    max-height:500px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.service-content,
+.project-content {
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/* =====================
+   About
+===================== */
+
+
+.about {
+
+    padding:80px 20px;
+
+}
+
+
+
+.about-container {
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+
+
+.about-content,
+.about-image {
+
+    flex:1;
+
+}
+
+
+
+.about-content h1 {
+
+    font-size:42px;
+
+}
+
+
+
+.about-content p {
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+
+
+.about-image img {
+
+    width:100%;
+
+    max-width:500px;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+/* =====================
+   Contact
+===================== */
+
+
+.contact {
+
+    padding:80px 20px;
+
+}
+
+
+
+.contact-container {
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+
+
+.contact-content {
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+.contact-content h1 {
+
+    font-size:42px;
+
+}
+
+
+
+.contact-content p {
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+
+
+.contact-info strong,
+.contact-info a {
+
+    color:#0073aa;
+
+}
+
+
+
+
+
+/* =====================
+   Responsive
+===================== */
+
+
+@media(max-width:768px){
+
+
+    main {
+
+        padding:20px;
+
+    }
+
+
+    .site-header {
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+
+    .main-nav ul {
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+    .hero-section {
+
+        flex-direction:column;
+
+        padding:60px 20px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size:38px;
+
+    }
+
+
+    .services-container,
+    .projects-container {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .about-container {
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+    .contact-content {
+
+        padding:30px 20px;
+
+    }
+
+
+}
